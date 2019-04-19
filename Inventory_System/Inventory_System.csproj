@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15C7FDFA-8DA6-4C2C-8EF8-B3614E063073}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory_System</RootNamespace>
+    <AssemblyName>Inventory_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Adding\AddCategory.xaml.cs">
+      <DependentUpon>AddCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddCustomer.xaml.cs">
+      <DependentUpon>AddCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddItem.xaml.cs">
+      <DependentUpon>AddItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddSalesMan.xaml.cs">
+      <DependentUpon>AddSalesMan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddSupplier.xaml.cs">
+      <DependentUpon>AddSupplier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddToPurchaseInvoice.xaml.cs">
+      <DependentUpon>AddToPurchaseInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddToSpecialInvoice.xaml.cs">
+      <DependentUpon>AddToSpecialInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adding\AddUser.xaml.cs">
+      <DependentUpon>AddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bills\ShowPurchaseInvoice.xaml.cs">
+      <DependentUpon>ShowPurchaseInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\ShowRecieptInvoice.xaml.cs">
+      <DependentUpon>ShowRecieptInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\ShowSellInvoice.xaml.cs">
+      <DependentUpon>ShowSellInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connects\Billls.xaml.cs">
+      <DependentUpon>Billls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connects\PurchaseInvoice.xaml.cs">
+      <DependentUpon>PurchaseInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connects\ReceiptInvoices.xaml.cs">
+      <DependentUpon>ReceiptInvoices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connects\Reportss.xaml.cs">
+      <DependentUpon>Reportss.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connects\SellInvoicess.xaml.cs">
+      <DependentUpon>SellInvoicess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseLayers\Base.cs" />
+    <Compile Include="DataBaseLayers\CategoryLayer.cs" />
+    <Compile Include="DataBaseLayers\CustomerLayer.cs" />
+    <Compile Include="DataBaseLayers\ItemInPurchaseLayer.cs" />
+    <Compile Include="DataBaseLayers\ItemInReceiptInvoiceLayer.cs" />
+    <Compile Include="DataBaseLayers\ItemLayer.cs" />
+    <Compile Include="DataBaseLayers\PurchaseInvoiceLayer.cs" />
+    <Compile Include="DataBaseLayers\ReceiptInvoiceLayer.cs" />
+    <Compile Include="DataBaseLayers\SalesManLayer.cs" />
+    <Compile Include="DataBaseLayers\SupplierLayer.cs" />
+    <Compile Include="MainForms\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Welcome1.xaml.cs">
+      <DependentUpon>Welcome1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotMappedCalsses\GetCategories.cs" />
+    <Compile Include="NotMappedCalsses\GetItems.cs" />
+    <Compile Include="NotMappedCalsses\GetSaleManWithSales.cs" />
+    <Compile Include="NotMappedCalsses\GetstagnantItem.cs" />
+    <Compile Include="NotMappedCalsses\GetTransaction.cs" />
+    <Compile Include="NotMappedCalsses\ItemsMapping.cs" />
+    <Compile Include="NotMappedCalsses\ReturnData.cs" />
+    <Compile Include="NotMappedCalsses\SaleData.cs" />
+    <Compile Include="Returnable\BacKToSellPercent.xaml.cs">
+      <DependentUpon>BacKToSellPercent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Returnable\BackToSupplier.xaml.cs">
+      <DependentUpon>BackToSupplier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Context.cs" />
+    <Compile Include="NotMappedCalsses\CountClass.cs" />
+    <Compile Include="NotMappedCalsses\Gard.cs" />
+    <Compile Include="NotMappedCalsses\Invoice.cs" />
+    <Compile Include="NotMappedCalsses\InvoiceData.cs" />
+    <Compile Include="Reports\LessQuantity.xaml.cs">
+      <DependentUpon>LessQuantity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotMappedCalsses\ListViewRecipt.cs" />
+    <Compile Include="NotMappedCalsses\ListViewSell.cs" />
+    <Compile Include="NotMappedCalsses\Percent.cs" />
+    <Compile Include="Bills\ReceiptInvoices.xaml.cs">
+      <DependentUpon>ReceiptInvoices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ItemForLongTime.xaml.cs">
+      <DependentUpon>ItemForLongTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ItemTranscations.xaml.cs">
+      <DependentUpon>ItemTranscations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\returnableItem.xaml.cs">
+      <DependentUpon>returnableItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SaleMenAndLatePayment.xaml.cs">
+      <DependentUpon>SaleMenAndLatePayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalesItem.xaml.cs">
+      <DependentUpon>SalesItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ShowItem.xaml.cs">
+      <DependentUpon>ShowItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Returnable\SalesManPay.xaml.cs">
+      <DependentUpon>SalesManPay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\SellInvoice.xaml.cs">
+      <DependentUpon>SellInvoice.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EF_Classes\Account.cs" />
+    <Compile Include="EF_Classes\Catogery.cs" />
+    <Compile Include="EF_Classes\Customer.cs" />
+    <Compile Include="EF_Classes\Item.cs" />
+    <Compile Include="EF_Classes\ItemInPurchaseInvoice.cs" />
+    <Compile Include="EF_Classes\ItemInReciprInvoice.cs" />
+    <Compile Include="EF_Classes\ItemInSalesInvoice.cs" />
+    <Compile Include="EF_Classes\purchaseInvoice.cs" />
+    <Compile Include="EF_Classes\ReceiptInvoice.cs" />
+    <Compile Include="EF_Classes\SalesInvoice.cs" />
+    <Compile Include="EF_Classes\salesman.cs" />
+    <Compile Include="EF_Classes\Supplier.cs" />
+    <Compile Include="EF_Classes\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Adding\AddCategory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddCustomer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddSalesMan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddSupplier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddToPurchaseInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddToSpecialInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Adding\AddUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Bills\ShowPurchaseInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Bills\ShowRecieptInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Bills\ShowSellInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Connects\Billls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Connects\PurchaseInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Connects\ReceiptInvoices.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Connects\Reportss.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Connects\SellInvoicess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainForms\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainForms\Welcome1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Returnable\BacKToSellPercent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Returnable\BackToSupplier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\LessQuantity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Bills\ReceiptInvoices.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\ItemForLongTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\ItemTranscations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\returnableItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\SaleMenAndLatePayment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\SalesItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\ShowItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Returnable\SalesManPay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Bills\SellInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\71ZN0QCll2L.png" />
+    <Resource Include="Images\9-receive-items-to-inventory-4.jpg" />
+    <Resource Include="Images\addPerson.png" />
+    <Resource Include="Images\es.fernandoharo.inventarioPro.png" />
+    <Resource Include="Images\in1.png" />
+    <Resource Include="Images\in2.png" />
+    <Resource Include="Images\in3.png" />
+    <Resource Include="Images\in4.png" />
+    <Resource Include="Images\in5.png" />
+    <Resource Include="Images\inventory-2-670x370.jpg" />
+    <Resource Include="Images\Inventory-Management-System-1.png" />
+    <Resource Include="Images\kisspng-warehouse-stock-photography-royalty-free-inventory-5af15c9c6a2253.9773361215257673244347 - Copy.jpg" />
+    <Resource Include="Images\password.png" />
+    <Resource Include="Images\Picture1.png" />
+    <Resource Include="Images\purchase-guy.png" />
+    <Resource Include="Images\Stacked-Boxes-Icon.png" />
+    <Resource Include="Images\tumblr_inline.png" />
+    <Resource Include="Images\User-512.png" />
+    <Resource Include="Images\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\categories.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Inventory-PNG-HD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Inventory-PNG-Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\inventory-management-v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pictur41.png" />
+    <Resource Include="Images\Picture10.png" />
+    <Resource Include="Images\Picture2.png" />
+    <Resource Include="Images\Picture3.png" />
+    <Resource Include="Images\Picture7.png" />
+    <Resource Include="Images\Picture81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Inventper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\iiinvoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stockvault-invoice-.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
